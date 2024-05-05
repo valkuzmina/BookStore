@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/book_image"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_margin="15dp"
+        android:layout_centerHorizontal="true"/>
+
+    <RatingBar
+        android:id="@+id/book_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/book_image"
+        android:layout_centerHorizontal="true"
+        android:progressTint="@color/white"
+        style="?android:attr/ratingBarStyleSmall"
+        android:focusable="false"
+        android:isIndicator="true"
+        android:clickable="false"
+        android:numStars="5"
+        android:visibility="visible" />
+    <TextView
+        android:id="@+id/book_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/book_rating"
+        android:layout_centerHorizontal="true"
+        android:text="Название произведения"/>
+    <TextView
+        android:id="@+id/book_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/book_name"
+        android:layout_centerHorizontal="true"
+        android:text="Автор произведения"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/book_author">
+        <Button
+            android:id="@+id/book_buy_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:theme="@style/BuyBook.Button"
+            android:textColor="@color/material_drawer_dark_primary_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-7dp"
+            android:focusable="false"
+            android:text="299,00 \u20BD"/>
+        <Button
+            android:id="@+id/book_menu_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:theme="@style/BuyBook.Button"
+            android:textColor="@color/material_drawer_dark_primary_text"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/book_buy_button"
+            android:focusable="false"
+            android:text="\u22EE"/>
+    </RelativeLayout>
+</RelativeLayout>
